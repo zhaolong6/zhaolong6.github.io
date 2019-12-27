@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2019-12-27T12:01:07.161Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/03/20/memorypartition/</loc>
     
     <lastmod>2019-12-27T11:41:32.943Z</lastmod>
@@ -16,20 +23,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/12/27/test3/</loc>
-    
-    <lastmod>2019-12-27T05:14:02.925Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    
-    <lastmod>2019-12-27T04:29:42.266Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2019-12-27T04:17:55.884Z</lastmod>
@@ -40,13 +33,6 @@
     <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2019-12-27T04:17:03.940Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/03/20/t1/</loc>
-    
-    <lastmod>2019-12-27T03:00:24.134Z</lastmod>
     
   </url>
   
@@ -68,13 +54,6 @@
     <loc>http://yoursite.com/repository/index.html</loc>
     
     <lastmod>2019-12-26T03:10:47.277Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/12/26/hello-world/</loc>
-    
-    <lastmod>2019-12-26T01:56:52.190Z</lastmod>
     
   </url>
   
