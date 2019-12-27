@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-26T03:44:53.031Z</updated>
+  <updated>2019-12-27T02:58:49.782Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="http://yoursite.com/2019/12/26/test/"/>
-    <id>http://yoursite.com/2019/12/26/test/</id>
-    <published>2019-12-26T03:42:21.000Z</published>
-    <updated>2019-12-26T03:44:53.031Z</updated>
+    <title>printf(&quot; Hello World!&quot;)</title>
+    <link href="http://yoursite.com/2019/12/27/helloworld-md/"/>
+    <id>http://yoursite.com/2019/12/27/helloworld-md/</id>
+    <published>2019-12-27T02:50:39.000Z</published>
+    <updated>2019-12-27T02:58:49.782Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="填补上空白区域，使函数输出-hello-world"><a href="#填补上空白区域，使函数输出-hello-world" class="headerlink" title="填补上空白区域，使函数输出 hello world"></a>填补上空白区域，使函数输出 hello world</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(  ?  )</span><br><span class="line">printf(&quot;hello&quot;);</span><br><span class="line">else</span><br><span class="line">printf(&quot;world&quot;);</span><br></pre></td></tr></table></figure><h4 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h4><ul><li>if分支只能执行一条</li><li>printf函数返回值为输出字符的数目</li><li>在if()内部利用printf()输出，条件语句为0（假），执行else语句</li></ul><h4 id="具体方法"><a href="#具体方法" class="headerlink" title="具体方法"></a>具体方法</h4><p>1、</p><pre><code>if(!(printf(&quot;Hello&quot;)))</code></pre><p>2、</p><pre><code>if(printf(&quot;Hello &quot;)！=6)</code></pre>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;填补上空白区域，使函数输出-hello-world&quot;&gt;&lt;a href=&quot;#填补上空白区域，使函数输出-hello-world&quot; class=&quot;headerlink&quot; title=&quot;填补上空白区域，使函数输出 hello world&quot;&gt;&lt;/a&gt;填补上空白区域，使函数
+      
     
     </summary>
     
     
+    
+      <category term="C/C++" scheme="http://yoursite.com/tags/C-C/"/>
+    
+      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
@@ -50,6 +61,31 @@
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>t1</title>
+    <link href="http://yoursite.com/2018/03/20/t1/"/>
+    <id>http://yoursite.com/2018/03/20/t1/</id>
+    <published>2018-03-20T12:45:47.000Z</published>
+    <updated>2019-12-27T03:00:24.134Z</updated>
+    
+    <content type="html"><![CDATA[<p>#dffjai<br>#dbsfsfeuh</p><pre><code></code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#dffjai&lt;br&gt;#dbsfsfeuh&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="C/C++" scheme="http://yoursite.com/tags/C-C/"/>
     
   </entry>
   
