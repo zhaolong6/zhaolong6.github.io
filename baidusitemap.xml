@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/2018/03/20/memorypartition/</loc>
-    <lastmod>2019-12-27</lastmod>
+    <loc>http://yoursite.com/2017/06/15/bash/</loc>
+    <lastmod>2019-12-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2017/06/14/Linux-%E6%8C%87%E4%BB%A4/</loc>
+    <lastmod>2019-12-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2017/06/14/Linux%E6%96%87%E4%BB%B6%E7%A7%8D%E7%B1%BB%E5%92%8C%E6%8B%93%E5%B1%95%E5%90%8D/</loc>
+    <lastmod>2019-12-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2018/09/30/net/</loc>
+    <lastmod>2019-12-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2018/12/30/tmux/</loc>
+    <lastmod>2019-12-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2018/11/30/mosh/</loc>
+    <lastmod>2019-12-30</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/03/09/languagemd/</loc>
+    <lastmod>2019-12-27</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2018/03/20/memorypartition/</loc>
     <lastmod>2019-12-27</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/12/27/helloworld-md/</loc>

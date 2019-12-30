@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/06/15/bash/</loc>
+    
+    <lastmod>2019-12-30T06:58:18.751Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/06/14/Linux-%E6%8C%87%E4%BB%A4/</loc>
+    
+    <lastmod>2019-12-30T06:57:46.486Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/06/14/Linux%E6%96%87%E4%BB%B6%E7%A7%8D%E7%B1%BB%E5%92%8C%E6%8B%93%E5%B1%95%E5%90%8D/</loc>
+    
+    <lastmod>2019-12-30T06:51:41.939Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/09/30/net/</loc>
+    
+    <lastmod>2019-12-30T06:49:31.986Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/12/30/tmux/</loc>
+    
+    <lastmod>2019-12-30T06:46:26.728Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/11/30/mosh/</loc>
+    
+    <lastmod>2019-12-30T06:46:03.056Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/03/09/languagemd/</loc>
+    
+    <lastmod>2019-12-27T12:37:37.277Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2019-12-27T12:01:07.161Z</lastmod>
@@ -12,13 +61,6 @@
     <loc>http://yoursite.com/2018/03/20/memorypartition/</loc>
     
     <lastmod>2019-12-27T11:41:32.943Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/03/09/languagemd/</loc>
-    
-    <lastmod>2019-12-27T11:35:01.340Z</lastmod>
     
   </url>
   

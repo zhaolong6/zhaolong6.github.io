@@ -43,6 +43,84 @@
   </entry>
   
   <entry>
+    <title>tmux</title>
+    <link href="http://yoursite.com/2018/12/30/tmux/"/>
+    <id>http://yoursite.com/2018/12/30/tmux/</id>
+    <published>2018-12-30T02:07:47.000Z</published>
+    <updated>2019-12-30T06:46:26.728Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="tmux-技巧与调整"><a href="#tmux-技巧与调整" class="headerlink" title="tmux 技巧与调整"></a>tmux 技巧与调整</h2><h2 id="tmux-技巧与调整-1"><a href="#tmux-技巧与调整-1" class="headerlink" title="tmux 技巧与调整"></a>tmux 技巧与调整</h2><ol><li><p>ubuntu 下安装</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get tmux</span><br></pre></td></tr></table></figure></li><li><p>window 窗口</p></li></ol><ul><li>-c    -new a window</li><li>-&amp;   -close current window</li><li>-l    -switch to last window</li><li>-n   -next window</li><li>-p   -previous window</li><li>-w  -show window menu list</li></ul><ol start="3"><li>pane 窗格</li></ol><ul><li>-%  -horizontal split 水平分屏</li><li>-“  - </li><li>-x   -close current pane</li><li>-;   -switch to last pane</li><li>-o  -move clockwise  逆时针切换窗格</li><li>C-o swap pane clockwise 逆时针切换窗格</li></ul><ol start="4"><li><p>configuration</p></li><li><p>1 tumx的配置文件</p><p> 每当开启一个新的会话时，Tmux 都会先读取 <code>~/.tmux.conf</code> 这个文件。该文件中存放的就是对 Tmux 的配置。</p><p> 小提示：如果你希望新的配置项能够立即生效，那么你可以将下面这一行配置加入到文件<code>~/.tmux.conf</code> 中。</p></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># bind a reload key</span><br><span class="line">bind R  source-file ~&#x2F;.tmux.conf ; display-message &quot;Config reloaded..&quot;</span><br></pre></td></tr></table></figure><p>   这样配置了之后，每当向 <code>~/.tmux.conf</code> 文件中添加了新的配置，只需要按下 <code>Ctrl-b r</code>就可以重新加载配置并使新的配置生效，从而免去了开启一个新的会话。</p><p>4.2 tmux常用配置</p>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.tmux.conf  文件中。</span><br><span class="line"># set new default prefix     修改主键(ctrl + c -&gt; ctrl +j)</span><br><span class="line">unbind C-b</span><br><span class="line">set-option -g prefix C-j</span><br><span class="line">#mouse  用鼠标切换窗格</span><br><span class="line">set-option -g -q mouse on</span><br><span class="line"></span><br><span class="line">#easy split pane commands 分割窗口按键</span><br><span class="line">bind h split-window -h</span><br><span class="line">bind v split-window -v</span><br><span class="line">unbind &#39;&quot;&#39;</span><br><span class="line">unbind %</span><br></pre></td></tr></table></figure><ol start="5"><li>Tmux 中的复制粘贴及鼠标操作</li></ol><p>5.1 仅开启鼠标支持</p><p>  在.tmux.conf 中添加一行配置。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#开启鼠标支持</span><br><span class="line">set-option -g mouse on</span><br></pre></td></tr></table></figure><p>  复制 按住<code>shift</code>键,然后拖动鼠标复制要选择的内容，然后按下<code>shift+ctrl+c</code>,复制到系统剪贴板<br>   粘贴 按下<code>shift+ctrl+v</code> 粘贴系统剪贴板中的内容到tmux中<br>   需要注意的是<br>   <code>shift+ctrl+v</code>是在终端设置的粘贴快捷键<br>   <code>shift+ctrl+c</code>是在终端设置的复制快捷键</p><p>5.2 如果想将在 Tmux 中发挥鼠标的威力，最好先将下面的设置打开:</p><pre><code>set -g mouse-resize-pane onset -g mouse-select-pane onset -g mouse-select-window onset -g mode-mouse on</code></pre><p>以上设置，将允许用<strong>鼠标选择面板、窗口，并允许手动修改面板的大小</strong>。其中最后一条命令，允许利用鼠标进入 cope-mode，可以直接在 tmux 中滚动历史，并选择文本将其复制到 tmux 的缓冲区中。当想要在其他面板或窗口中复制这段文本时，只需要使用复制命令 <code>bindkey p</code> 即可。这样，基本上 Tmux 内部的复制粘贴就都可以搞定。</p><p>这里有一个 trick，那就是在 tmux 中不论选择还是复制时，都按住 <code>Shift</code> 键，你会发现熟悉的中键又回来了 :-) 此外，还可以使用 <code>Shift+Insert</code> 快捷键将系统剪切板中的内容输入 tmux 中。 相对于 tmux 原生的选择模式（不加 <code>shift</code> 键），使用系统选择有个缺陷，即当一行内存在多个面板时，无法选择单个面板中的内容，这时就必须使用 tmux 自带的复制粘贴系统了。</p><h4 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接"></a>参考连接</h4><p><a href="https://www.cnblogs.com/maoxiaolv/p/5526602.html" target="_blank" rel="noopener">木子三斤的blog</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;tmux-技巧与调整&quot;&gt;&lt;a href=&quot;#tmux-技巧与调整&quot; class=&quot;headerlink&quot; title=&quot;tmux 技巧与调整&quot;&gt;&lt;/a&gt;tmux 技巧与调整&lt;/h2&gt;&lt;h2 id=&quot;tmux-技巧与调整-1&quot;&gt;&lt;a href=&quot;#tmux-技巧与调
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="tmux" scheme="http://yoursite.com/tags/tmux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mosh</title>
+    <link href="http://yoursite.com/2018/11/30/mosh/"/>
+    <id>http://yoursite.com/2018/11/30/mosh/</id>
+    <published>2018-11-30T06:44:38.000Z</published>
+    <updated>2019-12-30T06:46:03.056Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="mosh"><a href="#mosh" class="headerlink" title="mosh"></a>mosh</h2><h4 id="1-mosh安装-ubuntu"><a href="#1-mosh安装-ubuntu" class="headerlink" title="1. mosh安装(ubuntu)"></a>1. mosh安装(ubuntu)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> sudo apt-get update</span><br><span class="line">sudo apt-get install mosh</span><br></pre></td></tr></table></figure><h4 id="2-mosh-连接"><a href="#2-mosh-连接" class="headerlink" title="2.mosh 连接"></a>2.mosh 连接</h4><p>mosh 使用的UDP协议连接，使用的端口是从60000到61000</p><h4 id="3-mosh的主要特点"><a href="#3-mosh的主要特点" class="headerlink" title="3. mosh的主要特点"></a>3. mosh的主要特点</h4><p>mosh是基于新的State Synchronization Protocol（SSP）协议，运行在UDP上，能同步不同主机对象的状态，加密和认证使用AES-128。当客户在WiFi网络中漫游或切换到3G网络，mosh能保持连接不断，在输入和删除命令时它能即时反馈，不会出现恼人的延迟</p><p>在高延迟的网络下，mosh比ssh流畅多了，而且在3G网络下，丢失网络变更IP后，终端连接不会中断。另外，mosh对编码的转换上，比其他终端有不少优势。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;mosh&quot;&gt;&lt;a href=&quot;#mosh&quot; class=&quot;headerlink&quot; title=&quot;mosh&quot;&gt;&lt;/a&gt;mosh&lt;/h2&gt;&lt;h4 id=&quot;1-mosh安装-ubuntu&quot;&gt;&lt;a href=&quot;#1-mosh安装-ubuntu&quot; class=&quot;header
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="mosh" scheme="http://yoursite.com/tags/mosh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络基础</title>
+    <link href="http://yoursite.com/2018/09/30/net/"/>
+    <id>http://yoursite.com/2018/09/30/net/</id>
+    <published>2018-09-30T06:46:38.000Z</published>
+    <updated>2019-12-30T06:49:31.986Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h4 id="1-网络"><a href="#1-网络" class="headerlink" title="1. 网络"></a>1. 网络</h4><ul><li>以太网(Ethernet)计算机局域网络技术，目前应用最广。</li></ul><h4 id="2-计算机网络的组成组件"><a href="#2-计算机网络的组成组件" class="headerlink" title="2. 计算机网络的组成组件"></a>2. 计算机网络的组成组件</h4><ul><li>节点 (node)：节点主要是具有网络地址(IP)的设备的统称</li><li>服务器主机(server)：就网络连接的方向来说，提供数据以“响应”给用户的主机，都可以被称为是一台服务器。</li><li>工作站(workstation)或客户端(client)：任何可以在计算机网络上输入的设备都可以是工作站，以连接发起的方向来说，主动发起连接去“请求”数据的，就可以称为客户端(client)</li><li>网卡(network interface card,NIC)  内置或外接在主机上面的一个设备，主要用于网络连接</li><li>网络接口： 利用软件设计出来的网络接口，主要是提供网络地址(ip)的任务。</li><li>网络形态或拓扑(topology)：各个节点在网络上的链接方式，一般讲的是物理连接方式</li><li>网关(gateway)：具有两个以上的网络接口，可以连接两个以上不同网段的设备</li></ul><h4 id="3-OSI七层协议"><a href="#3-OSI七层协议" class="headerlink" title="3. OSI七层协议"></a>3. OSI七层协议</h4><ul><li>接收端和发送端，每一层只认识对方的同一层次的数据</li><li>传送过程 用户通过应用程序将数据放入第七层的包裹，再将第七层的包裹放到第六层的包裹内，依序一直放到第一层的最大的包裹内，然后传送出去给接收端。接收端的主机就得由第一个包裹开始，依序将每个包裹拆开，然后一个一个交给对应负责的层次来查看</li><li>包裹表面包含来自哪里、要去哪里、接受者是谁；包裹里面是真正的数据</li><li>OSI七层协议为一个网络模型(model)，并非硬性规定。这个七层协议可以协助软硬件开发简历一个基本的准则，且每一分层各自独立，方便开发者使用。</li><li>数据链路层里最重要的信息为MAC(Media Access Control)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;网络&quot;&gt;&lt;a href=&quot;#网络&quot; class=&quot;headerlink&quot; title=&quot;网络&quot;&gt;&lt;/a&gt;网络&lt;/h2&gt;&lt;h4 id=&quot;1-网络&quot;&gt;&lt;a href=&quot;#1-网络&quot; class=&quot;headerlink&quot; title=&quot;1. 网络&quot;&gt;&lt;/a&gt;1. 网络&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="网络" scheme="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C语言内存分区和变量属性</title>
     <link href="http://yoursite.com/2018/03/20/memorypartition/"/>
     <id>http://yoursite.com/2018/03/20/memorypartition/</id>
@@ -77,7 +155,7 @@
     <link href="http://yoursite.com/2018/03/09/languagemd/"/>
     <id>http://yoursite.com/2018/03/09/languagemd/</id>
     <published>2018-03-09T12:05:29.000Z</published>
-    <updated>2019-12-27T11:35:01.340Z</updated>
+    <updated>2019-12-27T12:37:37.277Z</updated>
     
     <content type="html"><![CDATA[<h1 id="MARKDOWN语法"><a href="#MARKDOWN语法" class="headerlink" title="MARKDOWN语法"></a>MARKDOWN语法</h1><h4 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h4><pre><code>#######一到六</code></pre><h4 id="二、修辞与强调"><a href="#二、修辞与强调" class="headerlink" title="二、修辞与强调"></a>二、修辞与强调</h4><p>Some of these words  <em>are emphasized</em>.//<em>斜体</em><br>Use two asterisks for <strong>strong emphasis</strong>.//<strong>加粗</strong></p><hr><h4 id="三、列表"><a href="#三、列表" class="headerlink" title="三、列表"></a>三、列表</h4><ul><li>asd</li></ul><table><thead><tr><th>项目</th><th>价格</th><th>收到</th></tr></thead><tbody><tr><td>Computer</td><td>$1600</td><td>sd</td></tr><tr><td>Phone</td><td>$12</td><td></td></tr><tr><td>Pipe</td><td>$1</td><td></td></tr><tr><td></td><td>项目</td><td>价格</td></tr><tr><td></td><td>:——–</td><td>——–:</td></tr><tr><td></td><td>Computer</td><td>1600 元</td></tr><tr><td></td><td>Phone</td><td>12 元</td></tr><tr><td></td><td>Pipe</td><td>1 元</td></tr><tr><td>1、asfa</td><td></td><td></td></tr><tr><td>2、asd</td><td></td><td></td></tr></tbody></table><hr><h4 id="四、链接"><a href="#四、链接" class="headerlink" title="四、链接"></a>四、链接</h4><h6 id="行内"><a href="#行内" class="headerlink" title="行内"></a>行内</h6><p>This is an <a href="http://example.com/" target="_blank" rel="noopener">example link</a>.</p><p>This is an <a href="http://example.com/" target="_blank" rel="noopener" title="With a Title">example link</a>.</p><h6 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h6><p>I get 10 times more traffic from <a href="http://google.com/" target="_blank" rel="noopener" title="Google">Google</a> than from<br><a href="http://search.yahoo.com/" target="_blank" rel="noopener" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" target="_blank" rel="noopener" title="MSN Search">MSN</a>.</p><h4 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h4><h6 id="CTRL-G"><a href="#CTRL-G" class="headerlink" title="CTRL+G"></a>CTRL+G</h6><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWctYmxvZy5jc2RuLm5ldC8yMDE4MDMxOTE5NTIwOTI5MT93YXRlcm1hcmsvMi90ZXh0L0x5OWliRzluTG1OelpHNHVibVYwTDNscGMyaGxibWRqYUdsNmFHRT0vZm9udC81YTZMNUwyVC9mb250c2l6ZS80MDAvZmlsbC9JMEpCUWtGQ01BPT0vZGlzc29sdmUvNzA?x-oss-process=image/format,png" alt="这里写图片描述"></p><h4 id="六、代码"><a href="#六、代码" class="headerlink" title="六、代码"></a>六、代码</h4><h6 id="一个tab"><a href="#一个tab" class="headerlink" title="一个tab"></a>一个tab</h6><pre><code>#include&lt;stdio.h&gt; int main(){     int n;int i,sum=0; for(i=0;i&lt;3;i++) {     scanf(&quot;%d&quot;,&amp;n);         sum=sum+n;  }  printf(&quot;%.3f&quot;,sum/3.0);return 0;   }</code></pre><h5 id="三个反斜杠-代码高亮"><a href="#三个反斜杠-代码高亮" class="headerlink" title="三个反斜杠``代码高亮"></a>三个反斜杠``代码高亮</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">   #include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int n;int i,sum&#x3D;0;</span><br><span class="line"> for(i&#x3D;0;i&lt;3;i++)</span><br><span class="line"> &#123;</span><br><span class="line"> scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line"> sum&#x3D;sum+n;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  printf(&quot;%.3f&quot;,sum&#x2F;3.0);</span><br><span class="line">   return 0;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -95,6 +173,86 @@
     
     
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>bash</title>
+    <link href="http://yoursite.com/2017/06/15/bash/"/>
+    <id>http://yoursite.com/2017/06/15/bash/</id>
+    <published>2017-06-15T06:52:14.000Z</published>
+    <updated>2019-12-30T06:58:18.751Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h2><p>管理整个计算机硬件是操作系统的内核（Kernel）,内核需要保护，所以一般用户只能通过shell跟内核通信</p><h4 id="1、shell"><a href="#1、shell" class="headerlink" title="1、shell"></a>1、shell</h4><p>通过shell将我们输入的命令与Kernel通信，让kernel控制硬件进行工作</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例：当你需要计算机输出“音乐”时</span><br><span class="line">1、硬件： 需要你的硬件有“声卡芯片”</span><br><span class="line">2、内核管理：操作系统的内核可以支持整个芯片组，还需提供芯片的驱动程序</span><br><span class="line">3、应用程序： 用户输入发出声音的命令</span><br></pre></td></tr></table></figure><h4 id="2、bash-shell"><a href="#2、bash-shell" class="headerlink" title="2、bash shell"></a>2、bash shell</h4><table><thead><tr><th>history</th><th>Tab</th><th>alias</th><th>job control</th><th>foreground</th><th>background</th><th>shell script</th><th>wildcard</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>—</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table><h4 id="3、bash-shell-的内置命令type"><a href="#3、bash-shell-的内置命令type" class="headerlink" title="3、bash shell 的内置命令type"></a>3、bash shell 的内置命令type</h4><p>通过type 命令可以知道命令是否为bash内置命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type name</span><br></pre></td></tr></table></figure><hr><h4 id="4、shell的变量功能"><a href="#4、shell的变量功能" class="headerlink" title="4、shell的变量功能"></a>4、shell的变量功能</h4><h5 id="4-1-变量"><a href="#4-1-变量" class="headerlink" title="4.1 变量"></a>4.1 变量</h5><p>变量，让某一个特定的字符串代表不固定的内容，</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;bash&quot;&gt;&lt;a href=&quot;#bash&quot; class=&quot;headerlink&quot; title=&quot;bash&quot;&gt;&lt;/a&gt;bash&lt;/h2&gt;&lt;p&gt;管理整个计算机硬件是操作系统的内核（Kernel）,内核需要保护，所以一般用户只能通过shell跟内核通信&lt;/p&gt;
+&lt;h4 
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="-bash -shell" scheme="http://yoursite.com/tags/bash-shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-指令</title>
+    <link href="http://yoursite.com/2017/06/14/Linux-%E6%8C%87%E4%BB%A4/"/>
+    <id>http://yoursite.com/2017/06/14/Linux-%E6%8C%87%E4%BB%A4/</id>
+    <published>2017-06-14T06:53:29.000Z</published>
+    <updated>2019-12-30T06:57:46.486Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="linux-目录"><a href="#linux-目录" class="headerlink" title="linux 目录"></a>linux 目录</h2><p>/bin:(binary) 存放二进制文件，给普通用户使用<br>/sbin: shell bin 只能超级用户使用<br>/etc: ()Linux 下所有配置文件,系统配置及用户安装的配置<br>/home : 所有非root用户所有用户家目录的集合<br>/root ：root用户的家目录<br>/var:(variable 可变的) 存放日志文件，apache和nginx站点目录也会放在这个目录<br>/usr: 用户自己安装的软件<br>/boot: (boot 启动)linux引导启动时用到的一些文件<br>/dev: (device设备)，光驱，U盘<br>/lib: (library)<br>/lost+found: 系统崩溃时的存放临时文件<br>/proc :(process)过程进程<br>/sys: (system)系统文件<br>/temp: 临时文件</p><h2 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h2><h4 id="1-通用语法"><a href="#1-通用语法" class="headerlink" title="1)通用语法"></a>1)通用语法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ 指令名称 【-选项】【操作目标】</span><br><span class="line">第一个被输入的数据绝对是命令或可执行文件</span><br></pre></td></tr></table></figure><h4 id="2-简单指令"><a href="#2-简单指令" class="headerlink" title="2)简单指令"></a>2)简单指令</h4><ul><li><p>ls指令 (list)       ls [路径]列出指定路径下的文件夹和文件名称</p></li><li><p>clear  == ctrl + l 清除屏幕中的命令</p></li><li><p>su 切换用户（用户名不写切换到root）</p></li><li><p>cd change directory   cd [路径]  绝对或相对路径   cd 切换到当前用户的家目录</p></li><li><p>pwd print working directory</p></li></ul><h4 id="3-文档操作指令"><a href="#3-文档操作指令" class="headerlink" title="3)文档操作指令"></a>3)文档操作指令</h4><ul><li><p>touch  文件的名字 路径</p></li><li><p>mkdir</p></li><li><p>cp  [-r] 需要复制的文档 需要保存的位置   -r 表示递归</p></li><li><p>mv  移动、剪切、重命名  mv 需要操作的文档  新的文档的位置  不需要 -r</p></li><li><p>rm [-rf] 需要删除的文档 -r 表示递归 -f 表示强制</p></li></ul><h4 id="4）文档查看指令"><a href="#4）文档查看指令" class="headerlink" title="4）文档查看指令"></a>4）文档查看指令</h4><ul><li>tail  (尾巴) 查看一个文件末多少行  tail -n 文件路径   -n不写 默认表示10行</li><li>head (头)查看一个文件头多少行  head -n 文件路径   -n不写 默认表示10行</li><li>cat  将内容全部输出到命令行中[正序] cat 文件路径1 文件路径2 文件路径3</li><li>tac 查看某文件的全部内容(倒序)       tac 文件路径1 文件路径2 文件路径3</li><li>vim 打开文件，显示内容 vim 文件路径</li></ul><h4 id="5-关机-重启指令"><a href="#5-关机-重启指令" class="headerlink" title="5)关机 重启指令"></a>5)关机 重启指令</h4><ul><li>sync 数据同步写入磁盘</li><li>reboot 重启计算机  普通用户无法执行</li><li>shutdown -h 时间<pre><code>now：立即关进+m： (m表示minutes)</code></pre></li><li>halt 关闭内存</li></ul><h2 id="进阶指令"><a href="#进阶指令" class="headerlink" title="进阶指令"></a>进阶指令</h2><ul><li><p>du  (directory used)  显示出目录所占的磁盘空间大小情况；du -sh 目录路径  -s :表示sumary 汇总统计 -h：表示以较高可读性的形式显示</p></li><li><p>df (disk free),查看磁盘的剩余空间的情况。-h表示以较高可读性的形式显示</p></li><li><p>free  查看内存的使用情况。 free -m</p><p>total :总计内存</p><p>used:已用内存</p><p>free：空闲 内存</p><p>share：共享内存</p><p>缓冲内存和缓存内存</p></li></ul><ul><li><p>find 根据条件查询文档的所在位置 #find  范围  选项  选项的值</p><p> -name ： 根据名字进行查询。支持通配符 * ,进行模糊查询</p><p>-type ： 根据文档的类型进行查询[d 表示文件夹，f表示普通文件，s表示套接字(sockets)，l表示连接文件(link快捷方式),c表示字符设备文件(character),b表示块状设备文件(block)]</p><p>-user： 根据所有者进行查询</p><p>-group：根据所属的用户组</p><p>-size ：根据大小进行查询</p></li><li><p>ps  (process show)查看进程 ps -ef</p><p>-e ： 等价于 -A，all，全部</p><p>-f  ：表示full，显示全部的列</p><p>UID： 进程的启动用户名</p><p>PID：process id进程的id</p><p>PPID : parent process id 父级进程</p><p>C：表示cpu的使用情况<br>STIME： start time 启动时间</p><p>TTY：终端的设备编号，”?”表示进程不是由终端发起的</p><p>TIME: 持续运行时间</p><p>CMD： command ,显示进程的名称或位置</p></li><li><p>service  操作服务的（启动、停止、重启）#service  服务名  start/stop/restart</p><p>服务名必须存在在/etc/init.d目录下</p><p>除了service指令操作服务，还可以 #/etc/init.d/服务名 start/stop/restart</p></li><li><p>grep 搜索、过滤对文件/内容进行筛选，选出需要的内容</p><p>#grep  [选项]  关键词   文件路径/内容</p><p>#grep “admin” php.txt        //查询php.txt的admin</p><p>-v  ：排除 #grep -v “admin” php.txt     //查询php.txt的所有除了admin</p><p>-e ：extension  多条件筛选 #grep -e “条件1|条件2|条件3” 文件路径或内容“|”表示or</p><p>egrep  等价于 grep -e</p></li><li><p>wc</p><p>word count,统计文件的各项数值(行、单词数、字节数)</p><p>#wc -lwc 文档的路径</p><p>-l  : line,行数</p><p>-w ：word ，单词数</p><p>-c :byte，字节</p></li></ul><ul><li>管道<h4 id="6-man"><a href="#6-man" class="headerlink" title="6) man"></a>6) man</h4></li></ul><p>manual（操作说明），进入man命令</p><table><thead><tr><th>代号</th><th>代表内容</th></tr></thead><tbody><tr><td>1</td><td>用户在shell环境中可以操作的命令或可执行文件</td></tr><tr><td>5</td><td>配置文件或者某些文件的格式</td></tr><tr><td>8</td><td>系统管理员可用的管理命令</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;linux-目录&quot;&gt;&lt;a href=&quot;#linux-目录&quot; class=&quot;headerlink&quot; title=&quot;linux 目录&quot;&gt;&lt;/a&gt;linux 目录&lt;/h2&gt;&lt;p&gt;/bin:(binary) 存放二进制文件，给普通用户使用&lt;br&gt;/sbin: shell 
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux文件种类和拓展名</title>
+    <link href="http://yoursite.com/2017/06/14/Linux%E6%96%87%E4%BB%B6%E7%A7%8D%E7%B1%BB%E5%92%8C%E6%8B%93%E5%B1%95%E5%90%8D/"/>
+    <id>http://yoursite.com/2017/06/14/Linux%E6%96%87%E4%BB%B6%E7%A7%8D%E7%B1%BB%E5%92%8C%E6%8B%93%E5%B1%95%E5%90%8D/</id>
+    <published>2017-06-14T06:50:27.000Z</published>
+    <updated>2019-12-30T06:51:41.939Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Linux-文件种类和拓展名"><a href="#Linux-文件种类和拓展名" class="headerlink" title="Linux 文件种类和拓展名"></a>Linux 文件种类和拓展名</h2><ul><li><p>普通文件 regular file</p></li><li><p>纯文本文件ASC11</p></li><li><p>二进制文件Binaty</p></li><li><p>数据格式文件</p></li><li><p>目录 directory 第一个属性是[d]</p></li><li><p>连接文件 类似于win下面的快捷方式，第一个属性是[l]</p></li><li><p>设备与设备文件 device </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">块(block)设备文件: 存储数据，提供系统随机访问的接口设备，例如硬盘软盘，可以随机的在硬盘的不同块上读写，第一个属性是[b]</span><br><span class="line">字符(character)设备文件：一些串行端口的接口设备，键盘、鼠标等。特征就是“一次性读取”，不能够截断输出，例如不可以让你的鼠标“跳到”另一个界面，而是滑动到另一个地方，第一个属性是[c]</span><br><span class="line">套接字(sockets) 通常被用在网络上的数据连接。我么可以启动一个程序来监听客户端的请求，而客户端就可以通过这个socket来进行数据的通信。其第一个属性是[s],</span><br></pre></td></tr></table></figure></li><li><p>管道（FIFO）</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FIFO是一种特殊的文件类型，它主要的目的在解决多个程序同时访问一个文件所造成的错误问题。</span><br><span class="line">FIFO即 First in First Out，第一个属性为[p]</span><br></pre></td></tr></table></figure></li><li><p>Linux文件扩展名</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">基本上Linux文件没有所谓的“拓展名”，一个Linux 文件能不能被执行，与它的第一列的10个属性有关，与文件名无关，有x即代表可被执行</span><br><span class="line">虽然拓展名无用，通常会采用一些适当的拓展名来表示文件的种类</span><br><span class="line">*.sh : 脚本或批处理文件(scripts)</span><br><span class="line">*.Z、*.tar、*.tar.gz、*.zip、*.tgz： 经过打包的压缩文件，不同的压缩文件</span><br><span class="line">*.html、*.php ：网页相关文件</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Linux-文件种类和拓展名&quot;&gt;&lt;a href=&quot;#Linux-文件种类和拓展名&quot; class=&quot;headerlink&quot; title=&quot;Linux 文件种类和拓展名&quot;&gt;&lt;/a&gt;Linux 文件种类和拓展名&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;普通文件 regular 
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
