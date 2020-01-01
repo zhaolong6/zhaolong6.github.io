@@ -18,15 +18,15 @@
   
   
   <title>C语言内存分区和变量属性 | ohzl</title>
-  <meta name="description" content="C语言内存分区   代码区 data （全局初始化、静态初始化、常量） Bss（未初始化数据区）    栈区 堆区    ——-     ## 变量的属性     ### 1、变量的分类     1234567891011121314151617181920212223242526272829根据作用域：可分为全局变量和局部变量。根据生存周期：可分为静态存储方式和动态存储方式，具体地又分为自动的（">
+  <meta name="description" content="C语言内存分区   代码区 data （全局初始化、静态初始化、常量） Bss（未初始化数据区）    栈区 堆区     变量的属性1、变量的分类1234567891011121314151617181920212223242526272829根据作用域：可分为全局变量和局部变量。根据生存周期：可分为静态存储方式和动态存储方式，具体地又分为自动的（auto）、静态的（static）、寄存器的（r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言内存分区和变量属性">
 <meta property="og:url" content="http://yoursite.com/2018/03/20/memorypartition/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="C语言内存分区   代码区 data （全局初始化、静态初始化、常量） Bss（未初始化数据区）    栈区 堆区    ——-     ## 变量的属性     ### 1、变量的分类     1234567891011121314151617181920212223242526272829根据作用域：可分为全局变量和局部变量。根据生存周期：可分为静态存储方式和动态存储方式，具体地又分为自动的（">
+<meta property="og:description" content="C语言内存分区   代码区 data （全局初始化、静态初始化、常量） Bss（未初始化数据区）    栈区 堆区     变量的属性1、变量的分类1234567891011121314151617181920212223242526272829根据作用域：可分为全局变量和局部变量。根据生存周期：可分为静态存储方式和动态存储方式，具体地又分为自动的（auto）、静态的（static）、寄存器的（r">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-03-20T12:25:11.000Z">
-<meta property="article:modified_time" content="2019-12-27T11:41:32.943Z">
+<meta property="article:modified_time" content="2020-01-01T03:25:57.979Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="C&#x2F;C++">
 <meta name="twitter:card" content="summary">
@@ -193,7 +193,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E6%BA%90/">开源</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -203,7 +203,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash-shell/" rel="tag">-bash -shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mosh/" rel="tag">mosh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tmux/" rel="tag">tmux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mosh/" rel="tag">mosh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/orcale/" rel="tag">orcale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tmux/" rel="tag">tmux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%BA%90/" rel="tag">开源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E6%B3%95/" rel="tag">语法</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -213,7 +213,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/bash-shell/" style="font-size: 13px;">-bash -shell</a> <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/Linux/" style="font-size: 14px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 13px;">Markdown</a> <a href="/tags/mosh/" style="font-size: 13px;">mosh</a> <a href="/tags/tmux/" style="font-size: 13px;">tmux</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 13px;">网络</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13px;">语法</a>
+      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/Database/" style="font-size: 13px;">Database</a> <a href="/tags/Git/" style="font-size: 13px;">Git</a> <a href="/tags/Linux/" style="font-size: 13.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 13px;">Markdown</a> <a href="/tags/bash/" style="font-size: 13px;">bash</a> <a href="/tags/mosh/" style="font-size: 13px;">mosh</a> <a href="/tags/orcale/" style="font-size: 13px;">orcale</a> <a href="/tags/shell/" style="font-size: 13px;">shell</a> <a href="/tags/tmux/" style="font-size: 13px;">tmux</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 13px;">开源</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 13px;">网络</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13px;">语法</a>
     </div>
   </div>
 
@@ -222,7 +222,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -234,6 +234,51 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Database/">Database</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/01/01/orcale/" class="title">orcale</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-01-01T14:49:01.000Z" itemprop="datePublished">2020-01-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%BC%80%E6%BA%90/">开源</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/01/01/opensource/" class="title">C/C++开源项目</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-01-01T14:46:45.000Z" itemprop="datePublished">2020-01-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Git/">Git</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/01/01/Git/" class="title">Git</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-01-01T14:42:14.000Z" itemprop="datePublished">2020-01-01</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -260,51 +305,6 @@
               </p>
               <p class="item-date">
                 <time datetime="2018-12-30T02:07:47.000Z" itemprop="datePublished">2018-12-30</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
-              </p>
-              <p class="item-title">
-                <a href="/2018/11/30/mosh/" class="title">mosh</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2018-11-30T06:44:38.000Z" itemprop="datePublished">2018-11-30</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
-              </p>
-              <p class="item-title">
-                <a href="/2018/09/30/net/" class="title">网络基础</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2018-09-30T06:46:38.000Z" itemprop="datePublished">2018-09-30</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a>
-              </p>
-              <p class="item-title">
-                <a href="/2018/03/20/memorypartition/" class="title">C语言内存分区和变量属性</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2018-03-20T12:25:11.000Z" itemprop="datePublished">2018-03-20</time>
               </p>
             </div>
           </li>
@@ -344,7 +344,7 @@
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a>
+    <a class="article-category-link" href="/categories/C-C/">C/C++</a>
   </span>
 
         
@@ -396,57 +396,12 @@
 <td>堆区</td>
 <td></td>
 </tr>
-<tr>
-<td>——-</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>## 变量的属性</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>### 1、变量的分类</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">根据作用域：可分为全局变量和局部变量。</span><br><span class="line"></span><br><span class="line">根据生存周期：可分为静态存储方式和动态存储方式，具体地又分为自动</span><br><span class="line">的（auto）、静态的（static）、寄存器的（register）、外部的</span><br><span class="line">（extern）</span><br><span class="line"></span><br><span class="line">注、静态存储方式是指在程序运行期间分配固定的存储空间的方式。</span><br><span class="line">   动态存储方式是在程序运行期间根据需要进行动态的分配存储空间的方</span><br><span class="line">式</span><br><span class="line">动态变量和静态变量的区别：</span><br><span class="line"></span><br><span class="line">1、存储位置</span><br><span class="line"></span><br><span class="line">动态变量：存储在内存出栈数据区</span><br><span class="line"></span><br><span class="line">静态变量：存储在全局数据区（静态数据区）</span><br><span class="line"></span><br><span class="line">2、生命期</span><br><span class="line"></span><br><span class="line">动态变量：根据你定义的位置确定，比如你在一个函数中定义的，那么超出</span><br><span class="line">该函数范围变量将失效</span><br><span class="line"></span><br><span class="line">静态变量：程序结束时才释放</span><br><span class="line"></span><br><span class="line">3、作用域</span><br><span class="line"></span><br><span class="line">动态变量：同样的要根据你定义的位置才能确定，和第二点的一样</span><br><span class="line"></span><br><span class="line">静态变量：当前文件中有效</span><br></pre></td></tr></table></figure></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>### 2、变量的作用域和存储类别的关系</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">每一个变量均有作用域和存储类别两个属性，这些属性共同用于描述一个变</span><br><span class="line">量，这些不同类型的变量与存储位置的关系如下：</span><br><span class="line"></span><br><span class="line">1、外部变量（全局变量）、静态外部变量、静态局部变量存储在静态存储</span><br><span class="line">区。</span><br><span class="line">2、自动局部变量（局部变量默认为自动局部变量）、函数形参存储在动态</span><br><span class="line">存储区（即栈区）。</span><br><span class="line"></span><br><span class="line">3、不论是静态存储区还是动态存储区均属于内存中的用户区。</span><br><span class="line"></span><br><span class="line">4、而寄存器变量是存储在CPU寄存器中的而不是内存中。</span><br></pre></td></tr></table></figure></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>### 3、与作用域相关的几个属性：</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">局部变量：在一个函数内部定义的变量是内部变量，它只在本函数范围内有</span><br><span class="line">效，也就是说只有在本函数内才能使用它们，在此函数以外是不能使用这些</span><br><span class="line">变量的，这种类型的变量就称为“局部变量”。</span><br><span class="line"></span><br><span class="line">全局变量：在函数外定义的变量，可以为本源文件中其它函数所公用，有效</span><br><span class="line">范围为从定义变量的位置开始到本源文件结束，这种类型的变量就称为“全</span><br><span class="line">局变量”。</span><br></pre></td></tr></table></figure></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>### 4、与存储类型相关的几个属性：</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">atuo：在声明局部变量时，若不指定 static，默认均是 auto，这类变量</span><br><span class="line">都是动态分配存储空间的，数据存储在动态存储区中。</span><br><span class="line"></span><br><span class="line">static：在声明局部变量时，使用关键字 static 将局部变量指定为“静</span><br><span class="line">态局部变量”，这样在函数调用结束后不消失而保留原值，即占用的存储单</span><br><span class="line">元不释放，在下一次函数调用时，该变量已有值就是上次函数调用结束时的</span><br><span class="line">值。</span><br><span class="line"></span><br><span class="line">register：在声明动态局部变量或者函数形参时，可将变量声明为</span><br><span class="line">register，这样编译系统就会为变量分配一个寄存器而不是内存空间，通</span><br><span class="line">过这种方式可提升对某些局部变量频繁调用的程序的性能。（寄存器运算速</span><br><span class="line">度远高于内存）</span><br><span class="line"></span><br><span class="line">extern：用于扩展全局变量的作用域。</span><br><span class="line"></span><br><span class="line">1)比如如果函数想引用一个外部变量，但该外部变量在该函数后定义，那么</span><br><span class="line">这个函数需要使用 extern 来声明变量，这样才能使用在该函数后面定义</span><br><span class="line">的全局变量。</span><br><span class="line"></span><br><span class="line">2)此外，extern 还可以在多文件的程序中声明外部变量。</span><br></pre></td></tr></table></figure></td>
-<td></td>
-<td></td>
-</tr>
 </tbody></table>
+<hr>
+<h2 id="变量的属性"><a href="#变量的属性" class="headerlink" title="变量的属性"></a>变量的属性</h2><h3 id="1、变量的分类"><a href="#1、变量的分类" class="headerlink" title="1、变量的分类"></a>1、变量的分类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">根据作用域：可分为全局变量和局部变量。</span><br><span class="line"></span><br><span class="line">根据生存周期：可分为静态存储方式和动态存储方式，具体地又分为自动</span><br><span class="line">的（auto）、静态的（static）、寄存器的（register）、外部的</span><br><span class="line">（extern）</span><br><span class="line"></span><br><span class="line">注、静态存储方式是指在程序运行期间分配固定的存储空间的方式。</span><br><span class="line">   动态存储方式是在程序运行期间根据需要进行动态的分配存储空间的方</span><br><span class="line">式</span><br><span class="line">动态变量和静态变量的区别：</span><br><span class="line"></span><br><span class="line">1、存储位置</span><br><span class="line"></span><br><span class="line">动态变量：存储在内存出栈数据区</span><br><span class="line"></span><br><span class="line">静态变量：存储在全局数据区（静态数据区）</span><br><span class="line"></span><br><span class="line">2、生命期</span><br><span class="line"></span><br><span class="line">动态变量：根据你定义的位置确定，比如你在一个函数中定义的，那么超出</span><br><span class="line">该函数范围变量将失效</span><br><span class="line"></span><br><span class="line">静态变量：程序结束时才释放</span><br><span class="line"></span><br><span class="line">3、作用域</span><br><span class="line"></span><br><span class="line">动态变量：同样的要根据你定义的位置才能确定，和第二点的一样</span><br><span class="line"></span><br><span class="line">静态变量：当前文件中有效</span><br></pre></td></tr></table></figure>
+<h3 id="2、变量的作用域和存储类别的关系"><a href="#2、变量的作用域和存储类别的关系" class="headerlink" title="2、变量的作用域和存储类别的关系"></a>2、变量的作用域和存储类别的关系</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">每一个变量均有作用域和存储类别两个属性，这些属性共同用于描述一个变</span><br><span class="line">量，这些不同类型的变量与存储位置的关系如下：</span><br><span class="line"></span><br><span class="line">1、外部变量（全局变量）、静态外部变量、静态局部变量存储在静态存储</span><br><span class="line">区。</span><br><span class="line">2、自动局部变量（局部变量默认为自动局部变量）、函数形参存储在动态</span><br><span class="line">存储区（即栈区）。</span><br><span class="line"></span><br><span class="line">3、不论是静态存储区还是动态存储区均属于内存中的用户区。</span><br><span class="line"></span><br><span class="line">4、而寄存器变量是存储在CPU寄存器中的而不是内存中。</span><br></pre></td></tr></table></figure>
+<h3 id="3、与作用域相关的几个属性："><a href="#3、与作用域相关的几个属性：" class="headerlink" title="3、与作用域相关的几个属性："></a>3、与作用域相关的几个属性：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">局部变量：在一个函数内部定义的变量是内部变量，它只在本函数范围内有</span><br><span class="line">效，也就是说只有在本函数内才能使用它们，在此函数以外是不能使用这些</span><br><span class="line">变量的，这种类型的变量就称为“局部变量”。</span><br><span class="line"></span><br><span class="line">全局变量：在函数外定义的变量，可以为本源文件中其它函数所公用，有效</span><br><span class="line">范围为从定义变量的位置开始到本源文件结束，这种类型的变量就称为“全</span><br><span class="line">局变量”。</span><br></pre></td></tr></table></figure>
+<h3 id="4、与存储类型相关的几个属性："><a href="#4、与存储类型相关的几个属性：" class="headerlink" title="4、与存储类型相关的几个属性："></a>4、与存储类型相关的几个属性：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">atuo：在声明局部变量时，若不指定 static，默认均是 auto，这类变量</span><br><span class="line">都是动态分配存储空间的，数据存储在动态存储区中。</span><br><span class="line"></span><br><span class="line">static：在声明局部变量时，使用关键字 static 将局部变量指定为“静</span><br><span class="line">态局部变量”，这样在函数调用结束后不消失而保留原值，即占用的存储单</span><br><span class="line">元不释放，在下一次函数调用时，该变量已有值就是上次函数调用结束时的</span><br><span class="line">值。</span><br><span class="line"></span><br><span class="line">register：在声明动态局部变量或者函数形参时，可将变量声明为</span><br><span class="line">register，这样编译系统就会为变量分配一个寄存器而不是内存空间，通</span><br><span class="line">过这种方式可提升对某些局部变量频繁调用的程序的性能。（寄存器运算速</span><br><span class="line">度远高于内存）</span><br><span class="line"></span><br><span class="line">extern：用于扩展全局变量的作用域。</span><br><span class="line"></span><br><span class="line">1)比如如果函数想引用一个外部变量，但该外部变量在该函数后定义，那么</span><br><span class="line">这个函数需要使用 extern 来声明变量，这样才能使用在该函数后面定义</span><br><span class="line">的全局变量。</span><br><span class="line"></span><br><span class="line">2)此外，extern 还可以在多文件的程序中声明外部变量。</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -602,8 +557,8 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     el: '#vcomments',
     verify: false,
     notify: false,
-    appId: '',
-    appKey: '',
+    appId: 'L89Taia3xQC9xoCr9KDdBHKA-gzGzoHsz',
+    appKey: 'N8xn3IVGUp9LcbBzyXX5GFjy',
     placeholder: 'Just go go',
     avatar: 'mm',
     meta: meta,
