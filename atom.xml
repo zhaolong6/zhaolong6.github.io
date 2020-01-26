@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://ohzl.xyz/"/>
   <updated>2020-01-01T14:50:25.458Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://ohzl.xyz/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>orcale</title>
-    <link href="http://yoursite.com/2020/01/01/orcale/"/>
-    <id>http://yoursite.com/2020/01/01/orcale/</id>
+    <link href="https://ohzl.xyz/2020/01/01/orcale/"/>
+    <id>https://ohzl.xyz/2020/01/01/orcale/</id>
     <published>2020-01-01T14:49:01.000Z</published>
     <updated>2020-01-01T14:50:25.458Z</updated>
     
@@ -37,19 +37,19 @@
     </summary>
     
     
-      <category term="Database" scheme="http://yoursite.com/categories/Database/"/>
+      <category term="Database" scheme="https://ohzl.xyz/categories/Database/"/>
     
     
-      <category term="orcale" scheme="http://yoursite.com/tags/orcale/"/>
+      <category term="orcale" scheme="https://ohzl.xyz/tags/orcale/"/>
     
-      <category term="Database" scheme="http://yoursite.com/tags/Database/"/>
+      <category term="Database" scheme="https://ohzl.xyz/tags/Database/"/>
     
   </entry>
   
   <entry>
     <title>C/C++开源项目</title>
-    <link href="http://yoursite.com/2020/01/01/opensource/"/>
-    <id>http://yoursite.com/2020/01/01/opensource/</id>
+    <link href="https://ohzl.xyz/2020/01/01/opensource/"/>
+    <id>https://ohzl.xyz/2020/01/01/opensource/</id>
     <published>2020-01-01T14:46:45.000Z</published>
     <updated>2020-01-01T14:48:15.273Z</updated>
     
@@ -65,19 +65,19 @@
     </summary>
     
     
-      <category term="开源" scheme="http://yoursite.com/categories/%E5%BC%80%E6%BA%90/"/>
+      <category term="开源" scheme="https://ohzl.xyz/categories/%E5%BC%80%E6%BA%90/"/>
     
     
-      <category term="C/C++" scheme="http://yoursite.com/tags/C-C/"/>
+      <category term="C/C++" scheme="https://ohzl.xyz/tags/C-C/"/>
     
-      <category term="开源" scheme="http://yoursite.com/tags/%E5%BC%80%E6%BA%90/"/>
+      <category term="开源" scheme="https://ohzl.xyz/tags/%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   
   <entry>
     <title>Git</title>
-    <link href="http://yoursite.com/2020/01/01/Git/"/>
-    <id>http://yoursite.com/2020/01/01/Git/</id>
+    <link href="https://ohzl.xyz/2020/01/01/Git/"/>
+    <id>https://ohzl.xyz/2020/01/01/Git/</id>
     <published>2020-01-01T14:42:14.000Z</published>
     <updated>2020-01-01T14:43:10.467Z</updated>
     
@@ -95,17 +95,17 @@
     </summary>
     
     
-      <category term="Git" scheme="http://yoursite.com/categories/Git/"/>
+      <category term="Git" scheme="https://ohzl.xyz/categories/Git/"/>
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+      <category term="Git" scheme="https://ohzl.xyz/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>printf(&quot; Hello World!&quot;)</title>
-    <link href="http://yoursite.com/2019/12/27/helloworld-md/"/>
-    <id>http://yoursite.com/2019/12/27/helloworld-md/</id>
+    <link href="https://ohzl.xyz/2019/12/27/helloworld-md/"/>
+    <id>https://ohzl.xyz/2019/12/27/helloworld-md/</id>
     <published>2019-12-27T02:50:39.000Z</published>
     <updated>2019-12-27T02:58:49.782Z</updated>
     
@@ -122,16 +122,16 @@
     
     
     
-      <category term="C/C++" scheme="http://yoursite.com/tags/C-C/"/>
+      <category term="C/C++" scheme="https://ohzl.xyz/tags/C-C/"/>
     
-      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
+      <category term="语法" scheme="https://ohzl.xyz/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>tmux</title>
-    <link href="http://yoursite.com/2018/12/30/tmux/"/>
-    <id>http://yoursite.com/2018/12/30/tmux/</id>
+    <link href="https://ohzl.xyz/2018/12/30/tmux/"/>
+    <id>https://ohzl.xyz/2018/12/30/tmux/</id>
     <published>2018-12-30T02:07:47.000Z</published>
     <updated>2019-12-30T06:46:26.728Z</updated>
     
@@ -147,17 +147,17 @@
     </summary>
     
     
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https://ohzl.xyz/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="tmux" scheme="http://yoursite.com/tags/tmux/"/>
+      <category term="tmux" scheme="https://ohzl.xyz/tags/tmux/"/>
     
   </entry>
   
   <entry>
     <title>mosh</title>
-    <link href="http://yoursite.com/2018/11/30/mosh/"/>
-    <id>http://yoursite.com/2018/11/30/mosh/</id>
+    <link href="https://ohzl.xyz/2018/11/30/mosh/"/>
+    <id>https://ohzl.xyz/2018/11/30/mosh/</id>
     <published>2018-11-30T06:44:38.000Z</published>
     <updated>2019-12-30T06:46:03.056Z</updated>
     
@@ -173,17 +173,17 @@
     </summary>
     
     
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https://ohzl.xyz/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="mosh" scheme="http://yoursite.com/tags/mosh/"/>
+      <category term="mosh" scheme="https://ohzl.xyz/tags/mosh/"/>
     
   </entry>
   
   <entry>
     <title>网络基础</title>
-    <link href="http://yoursite.com/2018/09/30/net/"/>
-    <id>http://yoursite.com/2018/09/30/net/</id>
+    <link href="https://ohzl.xyz/2018/09/30/net/"/>
+    <id>https://ohzl.xyz/2018/09/30/net/</id>
     <published>2018-09-30T06:46:38.000Z</published>
     <updated>2019-12-30T06:49:31.986Z</updated>
     
@@ -199,17 +199,17 @@
     </summary>
     
     
-      <category term="网络" scheme="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://ohzl.xyz/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https://ohzl.xyz/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>C语言内存分区和变量属性</title>
-    <link href="http://yoursite.com/2018/03/20/memorypartition/"/>
-    <id>http://yoursite.com/2018/03/20/memorypartition/</id>
+    <link href="https://ohzl.xyz/2018/03/20/memorypartition/"/>
+    <id>https://ohzl.xyz/2018/03/20/memorypartition/</id>
     <published>2018-03-20T12:25:11.000Z</published>
     <updated>2020-01-01T03:25:57.979Z</updated>
     
@@ -229,17 +229,17 @@
     </summary>
     
     
-      <category term="C/C++" scheme="http://yoursite.com/categories/C-C/"/>
+      <category term="C/C++" scheme="https://ohzl.xyz/categories/C-C/"/>
     
     
-      <category term="C/C++" scheme="http://yoursite.com/tags/C-C/"/>
+      <category term="C/C++" scheme="https://ohzl.xyz/tags/C-C/"/>
     
   </entry>
   
   <entry>
     <title>Markdown语法</title>
-    <link href="http://yoursite.com/2018/03/09/languagemd/"/>
-    <id>http://yoursite.com/2018/03/09/languagemd/</id>
+    <link href="https://ohzl.xyz/2018/03/09/languagemd/"/>
+    <id>https://ohzl.xyz/2018/03/09/languagemd/</id>
     <published>2018-03-09T12:05:29.000Z</published>
     <updated>2019-12-27T12:37:37.277Z</updated>
     
@@ -255,17 +255,17 @@
     </summary>
     
     
-      <category term="Markdown" scheme="http://yoursite.com/categories/Markdown/"/>
+      <category term="Markdown" scheme="https://ohzl.xyz/categories/Markdown/"/>
     
     
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="https://ohzl.xyz/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>bash</title>
-    <link href="http://yoursite.com/2017/06/15/bash/"/>
-    <id>http://yoursite.com/2017/06/15/bash/</id>
+    <link href="https://ohzl.xyz/2017/06/15/bash/"/>
+    <id>https://ohzl.xyz/2017/06/15/bash/</id>
     <published>2017-06-15T06:52:14.000Z</published>
     <updated>2020-01-01T03:24:20.728Z</updated>
     
@@ -282,19 +282,19 @@
     </summary>
     
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="https://ohzl.xyz/categories/Linux/"/>
     
     
-      <category term="bash" scheme="http://yoursite.com/tags/bash/"/>
+      <category term="bash" scheme="https://ohzl.xyz/tags/bash/"/>
     
-      <category term="shell" scheme="http://yoursite.com/tags/shell/"/>
+      <category term="shell" scheme="https://ohzl.xyz/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>Linux-指令</title>
-    <link href="http://yoursite.com/2017/06/14/Linux-%E6%8C%87%E4%BB%A4/"/>
-    <id>http://yoursite.com/2017/06/14/Linux-%E6%8C%87%E4%BB%A4/</id>
+    <link href="https://ohzl.xyz/2017/06/14/Linux-%E6%8C%87%E4%BB%A4/"/>
+    <id>https://ohzl.xyz/2017/06/14/Linux-%E6%8C%87%E4%BB%A4/</id>
     <published>2017-06-14T06:53:29.000Z</published>
     <updated>2020-01-01T14:46:59.529Z</updated>
     
@@ -310,17 +310,17 @@
     </summary>
     
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="https://ohzl.xyz/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="https://ohzl.xyz/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux文件种类和拓展名</title>
-    <link href="http://yoursite.com/2017/06/14/Linux%E6%96%87%E4%BB%B6%E7%A7%8D%E7%B1%BB%E5%92%8C%E6%8B%93%E5%B1%95%E5%90%8D/"/>
-    <id>http://yoursite.com/2017/06/14/Linux%E6%96%87%E4%BB%B6%E7%A7%8D%E7%B1%BB%E5%92%8C%E6%8B%93%E5%B1%95%E5%90%8D/</id>
+    <link href="https://ohzl.xyz/2017/06/14/Linux%E6%96%87%E4%BB%B6%E7%A7%8D%E7%B1%BB%E5%92%8C%E6%8B%93%E5%B1%95%E5%90%8D/"/>
+    <id>https://ohzl.xyz/2017/06/14/Linux%E6%96%87%E4%BB%B6%E7%A7%8D%E7%B1%BB%E5%92%8C%E6%8B%93%E5%B1%95%E5%90%8D/</id>
     <published>2017-06-14T06:50:27.000Z</published>
     <updated>2019-12-30T06:51:41.939Z</updated>
     
@@ -337,10 +337,10 @@
     </summary>
     
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="https://ohzl.xyz/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="https://ohzl.xyz/tags/Linux/"/>
     
   </entry>
   
